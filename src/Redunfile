@@ -1,0 +1,22 @@
+import React,{useState} from 'react';
+import './App.css';
+import Tweet from './Components/Tweet';
+
+function App() {
+  const [users, setUsers] = useState([
+    { id: 1, name: 'victor', message: 'love' },
+    { id: 2, name: 'pat', message: 'Grace' },
+    {id:3, name:'Dewinner', message:'Mercy'}
+  ])
+  return (
+    <div>
+      {users.map((user) => (
+        <Tweet key={user.id} name={user.name} message={user.message}
+        
+        />
+      ))}
+    </div>
+  );
+}
+
+export default App;
